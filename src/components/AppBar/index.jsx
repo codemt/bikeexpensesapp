@@ -21,6 +21,9 @@ function ApplicationNav(props) {
           <Typography variant="h6" color="inherit">
             My Bike App
           </Typography>
+          <Typography variant="h6" color="inherit">
+            Show All Expenses
+          </Typography>
         </Toolbar>
       </AppBar>
     </div>

@@ -39,8 +39,14 @@ import  { addExpenses } from '../../actions/addexpenses';
     onSubmit = (e) => {
 
         e.preventDefault();
+        const expense_name = this.state.expense_name;
         const expense_amount = this.state.expense_amount;
-        this.props.addExpenses(expense_amount);
+        const expenses = { 
+                title:expense_name,
+                amount:expense_amount
+
+        }
+        this.props.addExpenses(expenses);
 
     }
 
