@@ -22,16 +22,20 @@ export const showExpenses = () =>  dispatch => {
 
                     });
 
+                    dispatch({
+
+                        type: SHOW_EXPENSE,
+                        expenses :  expenses     
+            
+                })
+
             });
 
+            
             console.log(expenses);
+            //console.log("My Data is "  +mydata);
 
-        dispatch({
-
-            type: SHOW_EXPENSE,
-            expenses :  expenses     
-
-    })
+        
 
     return expenses;
 
