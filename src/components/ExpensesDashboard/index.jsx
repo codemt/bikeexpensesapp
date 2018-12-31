@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import  { showExpenses } from '../../actions/showexpenses';
+import NavBar from '../AppBar/navbar';
  class ExpensesDashboard extends Component {
 
 
@@ -14,25 +15,19 @@ componentDidMount(){
       console.log(this.props);
       console.log(this.props.expenses);
 
-      ///const { data } = this.props.expenses;
 
-     // console.log(this.props.expenses[0])
-      //  const data = JSON.stringify(this.props.expenses); 
-        //console.log(this.props.expenses[0]['id']);
+      if(this.props.expenses){
 
-        // const expense_name = this.props.expenses.map(p => p.expense_name);
-        // console.log("Expense name is" , expense_name);
-
-
-    return(
+        return(
 
             <div> 
+            <NavBar />
             
             <h1> Hello</h1>
                   {this.props.expenses.map(item =>
                     <ul>
-                    <li> {item.expense_name}</li>
-                    <li>{item.expense_amount}</li>
+                    <li key={item.id}> {item.expense_name}</li>
+                    <li key={item.id}>{item.expense_amount}</li>
                     </ul>    
                     
                  )} 
@@ -44,6 +39,19 @@ componentDidMount(){
             
 
     )
+
+
+      }
+      else{
+
+            return(
+
+                    <div> <h1> Loading....  </h1> </div>
+
+            )
+
+      }
+    
 
     
   
