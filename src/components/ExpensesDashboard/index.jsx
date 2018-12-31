@@ -26,8 +26,8 @@ componentDidMount(){
             <h1> Hello</h1>
                   {this.props.expenses.map(item =>
                     <ul>
-                    <li key={item.id}> {item.expense_name}</li>
-                    <li key={item.id}>{item.expense_amount}</li>
+                    <a href={item.id}><li> {item.expense_name}</li> </a>
+                    <li>{item.expense_amount}</li>
                     </ul>    
                     
                  )} 
