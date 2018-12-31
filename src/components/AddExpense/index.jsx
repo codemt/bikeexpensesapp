@@ -65,7 +65,6 @@ import NavBar from '../AppBar/navbar';
     return (    
 
         <div>
-        <NavBar />
                 <form>
                         <input type="text" placeholder="Enter Expense Name" name="expense_name" onChange={this.handleChange} />
                         <input type="number" placeholder="Enter Amount" name="expense_amount" onChange={this.handleChange} />

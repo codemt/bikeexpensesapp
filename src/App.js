@@ -6,6 +6,7 @@ import { Router , Route , Switch } from 'react-router-dom';
 import store from './store';
 import ExpensesDashboard from './components/ExpensesDashboard';
 import history from './routes/history';
+import AddExpenses from './containers/AddExpenses';
 class App extends Component {
 
   render() {
@@ -13,7 +14,7 @@ class App extends Component {
       <Provider store={store}>
       <Router history={history}>
             <Switch>
-            <Route exact strict path='/' component={AddExpense} />
+            <Route exact strict path='/' component={AddExpenses} />
             <Route exact strict path='/dashboard' component={ExpensesDashboard} />
             </Switch>
       </Router>
